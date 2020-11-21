@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="407b519c-7980-4047-bcbb-98fa7e36c15b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1k7Jy2Zvhfg6k9Pjo2bcnnLPOc7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin_part" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin_part" />
+      <recent name="$PROJECT_DIR$/admin_part/images" />
+      <recent name="$PROJECT_DIR$/admin" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user_part" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/auth" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="407b519c-7980-4047-bcbb-98fa7e36c15b" name="Default Changelist" comment="" />
+      <created>1605045947375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605045947375</updated>
+      <workItem from="1605045948469" duration="2584000" />
+      <workItem from="1605048544238" duration="5021000" />
+      <workItem from="1605101358630" duration="3762000" />
+      <workItem from="1605131442734" duration="5947000" />
+      <workItem from="1605193826678" duration="5179000" />
+      <workItem from="1605227835832" duration="1086000" />
+      <workItem from="1605536067252" duration="11112000" />
+      <workItem from="1605622959649" duration="5609000" />
+      <workItem from="1605663484067" duration="602000" />
+      <workItem from="1605902174674" duration="4581000" />
+      <workItem from="1605906838131" duration="5123000" />
+      <workItem from="1605916976371" duration="2000" />
+      <workItem from="1605977425915" duration="3788000" />
+      <workItem from="1605981283541" duration="1067000" />
+      <workItem from="1605982428231" duration="71000" />
+      <workItem from="1605982531738" duration="632000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="409" y="195" width="596" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605981350627">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="409" y="195" width="596" height="411" key="#com.intellij.fileTypes.FileTypeChooser/58.27.1308.741@58.27.1308.741" timestamp="1605981350627" />
+    <state x="495" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605904115300">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="495" y="155" width="424" height="491" key="FileChooserDialogImpl/58.27.1308.741@58.27.1308.741" timestamp="1605904115300" />
+    <state x="507" y="319" width="399" height="164" key="NewPhpFileDialog" timestamp="1605979983667">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="507" y="319" width="399" height="164" key="NewPhpFileDialog/58.27.1308.741@58.27.1308.741" timestamp="1605979983667" />
+    <state x="109" y="27" width="1022" height="737" key="SettingsEditor" timestamp="1605538299979">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="109" y="27" width="1022" height="737" key="SettingsEditor/58.27.1308.741@58.27.1308.741" timestamp="1605538299979" />
+    <state x="376" y="174" key="run.anything.popup" timestamp="1605048645376">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="376" y="174" key="run.anything.popup/58.27.1308.741@58.27.1308.741" timestamp="1605048645376" />
+    <state x="375" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605981943977">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="375" y="89" width="672" height="678" key="search.everywhere.popup/58.27.1308.741@58.27.1308.741" timestamp="1605981943977" />
+  </component>
+</project>

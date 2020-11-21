@@ -1,0 +1,67 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+}
+
+#bell { 
+    background-color: aquamarine;
+    border: 2px solid gray;
+    border-radius: 10px;
+    height: 500px;
+    margin: 20px;
+    padding: 10px;
+}
+#things { 
+    background-color: cornflowerblue;
+    padding: 20px;
+    margin: 20px;
+}
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.selectUsers {
+    background-color: sandybrown;
+    min-height: 100px;
+}
+
+#usersName {
+    width: 150px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+#things label {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+}
+
+#products { 
+    margin-top: 20px;
+}
+
+#totalPrice {
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: slateblue;
+}
+
+.orderTb {
+    border: 1px solid black;
+    /* width: 500px; */
+    /* margin-left: 200px; */
+    text-align: center;
+    font-size: 20px;
+}
+.orderTb td{
+    border: 2px solid black;
+    
+}
+
