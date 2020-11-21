@@ -27,7 +27,6 @@ if (!isset($_SESSION['User'])){
         float: right;
         margin-right: 20px;
         text-align: center;
-        margin-top: 50px;
     }
 
 
@@ -66,49 +65,61 @@ if (!isset($_SESSION['User'])){
 
     <!------------------------------------------------startbody----------------------------------------------------------------->
     <!------navbar------>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="user_home.php"> Site</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="user_home.php">Home</a></li>
-                    <li><a href="user_orders.php">My Orders</a></li>
+    <nav>
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../auth/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-                </ul>
+<div class=" navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        <li><a href="user_home.php">Home</a></li>
+        <li><a href="user_orders.php">My Orders</a></li>
+
+    </ul>
+    <ul>
+        <?php
+        $id = 6;
+        $host = "localhost";
+        $uname = "root";
+        $pwd = '';
+        $db_name = "cafeteria";
+        $result = mysqli_connect($host, $uname, $pwd) or die("Could not connect to database." . mysqli_error());
+        mysqli_select_db($result, $db_name) or die("Could not select the databse." . mysqli_error());
+        $image_query = mysqli_query($result, "SELECT user_name,user_profile_picture FROM users WHERE Id =$id");
+        while ($rows = mysqli_fetch_array($image_query)) {
+            $img_name = $rows['user_name'];
+            $img_src = $rows['user_profile_picture'];
+
+        ?>
+
+            <div class="img-block">
+                <img src="<?php echo $img_src; ?>" alt="" title="<?php echo $img_name; ?>" />
+                <p><strong><?php echo $img_name; ?></strong></p>
             </div>
-        </div>
-    </nav>
+
+        <?php
+        }
+        ?> </ul>
+</div>
+</nav>
 
     <!------end navbar------>
     <div>
         <div class="product">
             <p><strong>5 LE</strong></p>
-            <img src="images/shay.png" alt="Tea" onclick="choseTea()">
+            <img src="../admin_part/images/shay.png" alt="Tea" onclick="choseTea()">
             <p><strong> Tea</strong></p>
         </div>
         <div class="product">
             <p><strong>10 LE</strong></p>
-            <img src="images/milk.jpg" alt="milk" onclick="chosemilk()">
+            <img src="../admin_part/images/milk.jpg" alt="milk" onclick="chosemilk()">
             <p><strong> milk</strong></p>
         </div>
         <div class="product">
             <p><strong>8 LE</strong></p>
-            <img src="images/cofe.jpg" alt="cofe" onclick="chosecofe()">
+            <img src="../admin_part/images/cofe.jpg" alt="cofe" onclick="chosecofe()">
             <p><strong> cofe</strong></p>
         </div>
         <div class="product">
             <p><strong>6 LE</strong></p>
-            <img src="images/7elba.jpg" alt="7elba" onclick="chose7elba()">
+            <img src="../admin_part/images/7elba.jpg" alt="7elba" onclick="chose7elba()">
             <p><strong> 7elba</strong></p>
         </div>
     </div>
@@ -141,6 +152,7 @@ if (!isset($_SESSION['User'])){
     </div>
 
     <?php
+$user_id=6;
 
     $servername = "localhost";
     $username = "root";
@@ -151,9 +163,8 @@ if (!isset($_SESSION['User'])){
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-    $stmt = $conn->prepare("SELECT p.product_picture,p.product_name,u.quantity FROM userorder u, products p 
-    WHERE p.product_Id=u.product_Id AND u.order_Id=(SELECT max(order_Id)FROM userorder)");
+    $stmt = $conn->prepare("SELECT p.product_picture,p.product_name,u.quantity FROM userorder u, products p,orders o 
+    WHERE p.product_Id=u.product_Id and o.order_id =u.order_id and o.user_id=$user_id  AND u.order_Id=(SELECT max(order_Id)FROM userorder)");
 
 
     $stmt->execute();
@@ -168,7 +179,7 @@ if (!isset($_SESSION['User'])){
             <p>Last order</p>
             <p><strong><?php echo $img_name; ?></strong></p>
 
-            <img src="<?php echo $img_src; ?>" alt="" title="<?php echo $img_name; ?>" />
+            <img src="<?php echo "../admin_part/".$img_src; ?>" alt="" title="<?php echo $img_name; ?>" />
             <p><strong><?php echo $img_quantity; ?></strong></p>
 
         </div>

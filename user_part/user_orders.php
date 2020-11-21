@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['User'])){
+if (!isset($_SESSION['User'])) {
     header('location: ../auth/login.php');
 }
 ?>
@@ -48,26 +48,15 @@ if (!isset($_SESSION['User'])){
 <body>
     <!------------------------------------------------startbody----------------------------------------------------------------->
     <!------navbar------>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="user_home.php"> Site</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="user_home.php">Home</a></li>
-                    <li><a href="user_orders.php">My Orders</a></li>
+    <nav>
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-            </div>
+        <div class=" navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="user_home.php">Home</a></li>
+                <li><a href="user_orders.php">My Orders</a></li>
+
+            </ul>
+
         </div>
     </nav>
 
@@ -86,7 +75,7 @@ if (!isset($_SESSION['User'])){
 
         <?php
 
-        $user_id = 1;
+        $user_id = 6;
         $from_date = isset($_POST["from_date"]) ? $_POST["from_date"] : (isset($_GET["from_date"]) ? $_GET["from_date"] : "");
         $to_date = isset($_POST["to_date"]) ? $_POST["to_date"] : (isset($_GET["to_date"]) ? $_GET["to_date"] : "");
 
@@ -133,7 +122,7 @@ if (!isset($_SESSION['User'])){
                     echo "<tr><td style='width:auto;border:1px solid black;'>" . "<a href='user_orders.php?id_date=" . $row["order_id"] . "&from_date=" . $from_date . "&to_date=" . $to_date . "'>" . $row["date"] . "</a>" .
                         "</td><td style='width:auto;border:1px solid black;'>" . $row["status_name"] .
                         "</td><td style='width:auto;border:1px solid black;'>"  . $row["total"] . "</td>" .
-                        (($row["status_name"] == "processing") ? " <td style='width:auto;border:1px solid black;'>
+                        (($row["status_name"] == "Processing") ? " <td style='width:auto;border:1px solid black;'>
              <a href='user_cancel.php?id=" . $row["order_id"] . "&from_date=" . $from_date . "&to_date=" . $to_date . "'>cancel </a> </td> " : "") . "</tr>";
                     $x += $row["total"];
                 }
@@ -168,7 +157,7 @@ if (!isset($_SESSION['User'])){
     ?>
             <div class="img-block">
                 <p><strong><?php echo $img_price . " LE"; ?></strong></p>
-                <img src="<?php echo $img_src; ?>" alt="" title="<?php echo $img_name; ?>" />
+                <img src="<?php echo "../admin_part/".$img_src; ?>" alt="" title="<?php echo $img_name; ?>" />
                 <p><strong><?php echo $img_name; ?></strong></p>
                 <p><strong><?php echo $img_quantity; ?></strong></p>
 

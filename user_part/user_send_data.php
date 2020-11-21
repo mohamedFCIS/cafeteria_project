@@ -10,7 +10,7 @@ $milk = $_POST["milk"];
 $cofe = $_POST["cofe"];
 $helba = $_POST["helba"];
 
-$user_id = 1;
+$user_id = 6;
 $orderSum = $tea * 5 + $milk * 10 + $cofe * 8 + $helba * 6;
 if ($orderSum != 0) {
     $servername = "localhost";
