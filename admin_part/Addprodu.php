@@ -77,7 +77,7 @@
                 <td><select name="Category">
                         <option value="1"> hot Drinks</option>
                         <option value="2"> cool Drinks</option>
-                    </select><a href="AddCategory.html">Add Category</a></td>
+                    </select><a href="AddCatgo.php">Add Category</a></td>
             </tr>
             <tr>
                 <td><label>Product picture</label></td>

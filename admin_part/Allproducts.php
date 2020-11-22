@@ -85,34 +85,34 @@ class allproducts{
     
      
       $selectQry="SELECT `product_Id`,`product_name`, `product_price`, `product_picture`FROM `products` WHERE 1";
-         echo"<a style='margin-left: 500px;' href='Addprodu.php'>Addproduct</a>";
+         echo"<a style='margin-left: 600px;' href='Addprodu.php'>Addproduct</a>";
           echo"<table border='1px' cellpadding='10' cellspacing='5'>
           <tr>
-          <th>product_id</th>
-          <th>product_name</th>
-					<th>product_price</th>
-                    <th>product_picture</th>
-                    <th>Action</th>
+          <th style='padding:20px;'>product_id</th>
+          <th style='padding:20px;'>product_name</th>
+					<th style='padding:20px;'>product_price</th>
+          <th style='padding:20px;'>product_picture</th>
+          <th style='padding:20px;'>Action</th>
           </tr>";
           
           foreach ($this->pdo->query($selectQry) as $row) {
 
          echo" <tr>
-         <td>$row[product_Id]</td>
-          <td>$row[product_name]</td>
-          <td>$row[product_price]</td>
-          <td>$row[product_picture]</td>
-          <td>
+         <td style='padding:20px;'>$row[product_Id]</td>
+          <td style='padding:20px;'>$row[product_name]</td>
+          <td style='padding:20px;'>$row[product_price]</td>
+          <td style='padding:20px;'>$row[product_picture]</td>
+          <td style='padding:20px;'>
           <form method='POST' action='test.php'>
           <input type='hidden' name='product_Id' value='$row[product_Id]' >
-          <input style='width:80px' type='submit' name='delete' value='delete'>
+          <input style='width:100px' type='submit' name='delete' value='delete'>
           </form>
-          <form method='POST' action='test.php'>
+          <form method='POST' action='update.php'>
           <input type='hidden' name='product_Id' value='$row[product_Id]' >
           <input type='hidden' name='product_name' value='$row[product_name]' >
           <input type='hidden' name='product_price' value='$row[product_price]' >
           <input type='hidden' name='product_picture' value='$row[product_picture]' >
-          <input style='width:80px' type='submit' name='update' value='Update'>
+          <input style='width:100px' type='submit' name='update' value='Update'>
           </form>
   
     </td>

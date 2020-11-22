@@ -1,3 +1,11 @@
+var productsDiv = document.getElementById('products');
+var userSelect = document.getElementById('usersName');
+var bellsDev = document.getElementById('bell')
+
+
+var btnAdd = document.getElementsByClassName('addTo');
+
+var inputt = document.getElementById('quantity')
 
 
 var items = [];
