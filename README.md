@@ -1,5 +1,9 @@
 # cafeteria_project
 This website for buying Cold and hot drinks with a simple and amazing user interface, which make buying easy and pleasant.
+* User Part Site
+
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://recordit.co/WwK0lhi2i0)
+
 
 
 ## Background
