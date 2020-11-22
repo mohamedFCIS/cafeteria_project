@@ -1,6 +1,6 @@
 # cafeteria_project
 This website for buying Cold and hot drinks with a simple and amazing user interface, which make buying easy and pleasant.
-https://recordit.co/9zl3wYaJxL
+
 
 ## Background
 * This project started to be presented as a assignment, but the actual interest grew so much. That's why we are Open Sourcing it, so other college mates can contribute to its development.
