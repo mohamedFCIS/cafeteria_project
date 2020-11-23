@@ -57,7 +57,7 @@ if (isset($_POST["create"])) {
 
 
     $newconn->setData($fname, $phone, $pass, $email, $img, $user_type);
-    echo $id;
+  
     $newconn->UpdateData("users", $id);
 }
 
@@ -114,7 +114,7 @@ if (isset($_POST["create"])) {
 
 
                             <div class="custom-file p-3">
-                                <input type="file" class="custom-file-input customFile" id="customFile2"  name="file" required>
+                                <input type="file" class="custom-file-input customFile" id="customFile2"  name="file" >
                                 
                                 <label class="custom-file-label"  for="customFile"> 
                                     

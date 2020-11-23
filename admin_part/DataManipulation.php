@@ -91,6 +91,8 @@ namespace useDatabase {
            
         }
 
+        //update function 
+
         public function UpdateData($table, $id)
         {
 
@@ -107,7 +109,7 @@ namespace useDatabase {
             $prepData->bindParam(":usphone", $this->phone);
             $prepData->bindParam(":ususer_type", $this->user_type);
             $prepData->execute();
-            header("Refresh:2 url=users.php");
+            header("Refresh:2 url=all_users.php");
 
             if ($prepData->execute()) {
                 print "<div class='alert alert-success text-center'>Updated Successfully </div>";
@@ -120,7 +122,7 @@ namespace useDatabase {
             $delQuary = "DELETE FROM users  WHERE `Id`=$id";
             $prepData = $this->dbconn->prepare($delQuary);
             $prepData->execute();
-            header("Refresh:0 url=users.php");
+            header("Refresh:0 url= all_users.php");
         }
 
 

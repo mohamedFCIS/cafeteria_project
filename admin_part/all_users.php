@@ -169,7 +169,7 @@ if (isset($_POST["create"])) {
                                         <td class="text-center w-25"> <img class="img w-25 " src="<?php echo $value["user_profile_picture"];  ?>" alt="<?php echo $value["user_profile_picture"]; ?>"></td>
                                         <td><?php echo $value["user_type"];  ?></td>
                                         <td><a href="userUpdate.php?update-id=<?php echo $value["Id"]; ?>" class="btn btn-primary" name="Update">Update</td>
-                                        <td><a href="users.php?delete-id=<?php echo $value["Id"]; ?>" class="btn btn-danger" name="delete">delete</td>
+                                        <td><a href="all_users.php?delete-id=<?php echo $value["Id"]; ?>" class="btn btn-danger" name="delete">delete</td>
 
 
 

@@ -1,5 +1,3 @@
-
-
 //show image profile in form when i selected it
 
 $(".custom-file-input").on("change", showPreviewOne);
@@ -14,14 +12,11 @@ function showPreviewOne(event) {
   }
 }
 
-
-
 let submit = document.getElementsByClassName("submite")[0];
 let uploadImg = document.getElementsByClassName("custom-file")[0];
 submit.addEventListener("click", ValidateEmail);
 submit.addEventListener("click", uploadImgFun);
 submit.addEventListener("click", CheckPassword);
-
 
 // Valid email address
 
@@ -29,7 +24,6 @@ function ValidateEmail() {
   let email = document.getElementsByClassName("email")[0];
   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (email.value.match(mailformat)) {
-  
     return true;
   } else {
     evt.preventDefault();
@@ -42,11 +36,11 @@ function ValidateEmail() {
 //validation of password
 function CheckPassword(evt) {
   let repassInput = document.getElementsByClassName("psw2")[0];
-  console.log(repassInput);
+  // console.log(repassInput);
 
   let passInput = document.getElementsByClassName("psw")[0];
   var check = passInput.value.localeCompare(repassInput.value);
-  console.log(check);
+  // console.log(check);
   var equal;
   if (check == 0) {
     // return true;
@@ -69,28 +63,34 @@ function CheckPassword(evt) {
 }
 
 function uploadImgFun(evt) {
-  var avatar = document.getElementsByClassName("customFile")[0].value;
-  console.log(avatar);
-  var extension = avatar.split(".").pop().toUpperCase();
-  if (avatar.length < 1) {
-    avatarok = 0;
-  } else if (
-    extension != "PNG" &&
-    extension != "JPG" &&
-    extension != "GIF" &&
-    extension != "JPEG"
-  ) {
-    avatarok = 0;
-    alert("invalid extension " + extension);
+  let imgInput = document.getElementsByClassName("customFile")[0];
+  var avatar = imgInput.value;
+  if (avatar) {
+    var extension = avatar.split(".").pop().toUpperCase();
+    if (avatar.length < 1) {
+      avatarok = 0;
+    } else if (
+      extension != "PNG" &&
+      extension != "JPG" &&
+      extension != "GIF" &&
+      extension != "JPEG"
+    ) {
+      avatarok = 0;
+      alert("invalid extension " + extension);
+    } else {
+      avatarok = 1;
+    }
+    if (avatarok == 1) {
+      return true;
+    } else {
+      evt.preventDefault();
+      console.log("error");
+      return false;
+    }
   } else {
-    avatarok = 1;
-  }
-  if(avatarok==1)
-  {
-    return true;
-  }
-  else{
     evt.preventDefault();
-     return false;
+    alert("error image not found");
+    imgInput.focus();
+    return false;
   }
 }
