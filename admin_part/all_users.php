@@ -20,7 +20,7 @@ $connect = $newconn->connDatabase();
 
 if (isset($_GET["delete-id"])) {
     $id = $_GET["delete-id"];
-    var_dump($id);
+   
     $newconn->DeleteData($id);
 }
 // insert into database
